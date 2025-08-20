@@ -42,26 +42,31 @@ function draw() {
 
   clear();
 
-  if (status == true) {
-    clear();
-    status = !status;
-  }
-
-
-  finalPG.push();
-  finalPG.background("#F5F5F5");
-  finalPG.noStroke();
-  /* finalPG.clear(); */
-  finalPG.image(pgA, 0, 0);
-  finalPG.image(pgC, 0, 0);
-  finalPG.image(pgB, 0, 0);
-  finalPG.pop();
-
-  ////////// PREVIEW
+   ////////// background
   push();
   translate(width / 2, height / 2);
-  image(finalPG, 0, 0);
+  fill("#F5F5F5");
+  rect(0, 0, pgA.width, pgA.height);
   pop();
+
+  ////////// LAYER A - rectangle
+  push();
+  translate(width / 2, height / 2);
+  image(pgA, 0, 0);
+  pop();
+
+  ////////// LAYER C - text
+  push();
+  translate(width / 2, height / 2);
+  image(pgC, 0, 0);
+  pop();
+
+  ////////// LAYER B - ellipse
+  push();
+  translate(width / 2, height / 2);
+  image(pgB, 0, 0);
+  pop();
+
 
 }
 
@@ -73,5 +78,14 @@ function hexToRgba(hex, alpha) {
 }
 
 function saveImage() {
+  finalPG.push();
+  finalPG.background("#F5F5F5");
+  finalPG.noStroke();
+  /* finalPG.clear(); */
+  finalPG.image(pgA, 0, 0);
+  finalPG.image(pgC, 0, 0);
+  finalPG.image(pgB, 0, 0);
+  finalPG.pop();
+  
   finalPG.save("kompozicia.png");
 }
