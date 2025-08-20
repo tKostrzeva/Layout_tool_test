@@ -1,0 +1,135 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="ui.css" />
+</head>
+
+<body>
+
+    <main id="tool-layout">
+        <div id="gui-left">
+
+            <div class="ui-component">
+                <label class="uiSectionHdl">Headline</label>
+            </div>
+
+
+            <div class="ui-component">
+                <textArea rows="4" type="text" id="headline">Napis si svoj nadpis</textArea>
+            </div>
+
+            <div class="ui-component">
+                <hr>
+            </div>
+
+            <!--   <div class="ui-component">
+                <label>Upload image</label>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div> -->
+
+            <div class="ui-component">
+                <label class="uiSectionHdl">Rectangle</label>
+            </div>
+
+            <div class="ui-component">
+                <label>Width</label>
+                <input type="range" id="rectW" value="600" min="100" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Height</label>
+                <input type="range" id="rectH" value="1050" min="100" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Color</label>
+                <input type="color" id="colorSelectorA" , value="#0033FF">
+                <!-- 
+                <select id="colorSelectorA">
+                    <option value="#FF0000">Red</option>
+                    <option value="#00FF00">Green</option>
+                    <option value="#0033FF" selected>Blue</option>
+                    <option value="#FF6400">Orange</option>
+                    <option value="#00FFFF">Cyan</option>
+                    <option value="#FF00FF">Magenta</option>
+                    <option value="#FFFF00">Yellow</option>
+                    <option value="#F5F5F5">White</option>
+                    <option value="#101010">Black</option>
+                </select> -->
+            </div>
+
+            <div class="ui-component">
+                <label>Position X</label>
+                <input type="range" id="rectPosX" value="150" min="-2000" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Position Y</label>
+                <input type="range" id="rectPosY" value="350" min="-2000" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Rotation</label>
+                <input type="range" id="rectRot" value="0" min="-180" max="180" step="15">
+            </div>
+
+            <div class="ui-component">
+                <hr>
+            </div>
+
+            <div class="ui-component">
+                <label class="uiSectionHdl">Ellipse</label>
+            </div>
+
+            <div class="ui-component">
+                <label>Size</label>
+                <input type="range" id="elliSize" value="1050" min="100" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Color</label>
+                <input type="color" id="colorSelectorB" , value="#00FFFF">
+            </div>
+
+            <div class="ui-component">
+                <label>Gradient radius</label>
+                <input type="range" id="elliGrad" value="500" min="0" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Position X</label>
+                <input type="range" id="elliPosX" value="600" min="-2000" max="2000">
+            </div>
+
+            <div class="ui-component">
+                <label>Position Y</label>
+                <input type="range" id="elliPosY" value="600" min="-2000" max="2000">
+            </div>
+
+            <br>
+
+
+
+            <br>
+
+            <div class="ui-component">
+                <button id="saveImg" onclick="saveImage()">Save an image</button>
+            </div>
+
+            <!-- <div class="ui-component">
+                <button id="saveVec" onclick="saveVector()">Save a Vector</button>
+            </div> -->
+
+        </div>
+        <div id="artboard">
+            <div id="sketch-wrapper"></div>
+        </div>
+    </main>
+
+    <script src="https://www.unpkg.com/p5@1.9.4/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.6.0"></script>
+
+    <script src="pgA.js"></script>
+    <script src="pgB.js"></script>
+    <script src="pgC.js"></script>
+    <script src="main.js"></script>
+
+</body>
