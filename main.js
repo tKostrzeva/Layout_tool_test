@@ -23,6 +23,11 @@ function setup() {
   createPgB();
   createPgC();
 
+  pixelDensity(2)
+  pgA.pixelDensity(2)
+  pgB.pixelDensity(2)
+  pgC.pixelDensity(2)
+  
   frameRate(120);
   c.parent("sketch-wrapper");
 
